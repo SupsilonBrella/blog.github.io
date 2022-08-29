@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>如何使用SUpsilon网站访客统计系统 - 云栈的小屋</title><meta name="Description" content="云栈Brella的个人博客"><meta property="og:title" content="如何使用SUpsilon网站访客统计系统" />
+<meta property="og:description" content="这是一篇有关SUpsilon访问统计系统（v1.4.4）的使用指南（应用于Wikidot） 源文件位于这里：http://www.brella" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:///blog.github.io/how-to-use-supsilon-access-system/" /><meta property="og:image" content="https:///logo.png/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-01-17T11:49:13+08:00" />
+<meta property="article:modified_time" content="2022-01-17T11:49:13+08:00" /><meta property="og:site_name" content="云栈的小屋" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https:///logo.png/"/>
+
+<meta name="twitter:title" content="如何使用SUpsilon网站访客统计系统"/>
+<meta name="twitter:description" content="这是一篇有关SUpsilon访问统计系统（v1.4.4）的使用指南（应用于Wikidot） 源文件位于这里：http://www.brella"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https:///blog.github.io/how-to-use-supsilon-access-system/" /><link rel="prev" href="https:///blog.github.io/first_post/" /><link rel="next" href="https:///blog.github.io/theme-documentation-basics/" /><link rel="stylesheet" href="/blog.github.io/css/style.min.css"><link rel="preload" href="/blog.github.io/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/blog.github.io/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/blog.github.io/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/blog.github.io/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "如何使用SUpsilon网站访客统计系统",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/\/blog.github.io\/how-to-use-supsilon-access-system\/"
+        },"genre": "posts","wordcount":  921 ,
+        "url": "https:\/\/\/blog.github.io\/how-to-use-supsilon-access-system\/","datePublished": "2022-01-17T11:49:13+08:00","dateModified": "2022-01-17T11:49:13+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "云栈"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/blog.github.io/" title="云栈的小屋"><img
+        class="lazyload logo"
+        src="/blog.github.io/svg/loading.min.svg"
+        data-src="/logo.png/"
+        data-srcset="/logo.png/, /logo.png/ 1.5x, /logo.png/ 2x"
+        data-sizes="auto"
+        alt="/logo.png/"
+        title="/logo.png/" />云栈的小屋</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/blog.github.io/posts/" title="云栈的小屋"> 文章 </a><a class="menu-item" href="/blog.github.io/tags/"> 标签 </a><a class="menu-item" href="/blog.github.io/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/blog.github.io/" title="云栈的小屋"><img
+        class="lazyload logo"
+        src="/blog.github.io/svg/loading.min.svg"
+        data-src="/logo.png/"
+        data-srcset="/logo.png/, /logo.png/ 1.5x, /logo.png/ 2x"
+        data-sizes="auto"
+        alt="/logo.png/"
+        title="/logo.png/" />云栈的小屋</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/blog.github.io/posts/" title="云栈的小屋">文章</a><a class="menu-item" href="/blog.github.io/tags/" title="">标签</a><a class="menu-item" href="/blog.github.io/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">如何使用SUpsilon网站访客统计系统</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/blog.github.io/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>云栈</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-01-17">2022-01-17</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;921 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#这是一篇有关supsilon访问统计系统v144的使用指南应用于wikidot">这是一篇有关SUpsilon访问统计系统（v1.4.4）的使用指南（应用于Wikidot）</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="这是一篇有关supsilon访问统计系统v144的使用指南应用于wikidot">这是一篇有关SUpsilon访问统计系统（v1.4.4）的使用指南（应用于Wikidot）</h2>
+<p>源文件位于这里：http://www.brella.top/supsilon/supsilon-access-system.js</p>
+<p>这玩意是我本年度写过第二长的代码，Bug一堆~</p>
+<p><strong>版本仍为测试版，数据显示不稳定</strong></p>
+<p>SUpsilon访问统计系统能够让你直观地看见你网站或页面的总访客人数、总访问次数以及单页面的访问次数，现在我们开始使用吧！</p>
+<p>1.你需要将SUpsilon系统安装到你的网站上（至少在主页有一个系统的安装），在你的网站的任何想要显示相关数据的地方输入以下字段：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">html</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span><span class="nx">script</span> <span class="nx">async</span> <span class="nx">src</span><span class="p">=</span><span class="s2">&#34;http://www.brella.top/supsilon/supsilon-access-system.js&#34;</span><span class="err">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;/</span><span class="nx">script</span><span class="err">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="err">/</span><span class="nx">html</span><span class="p">]]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2.当系统安装完毕时，它便已经开始工作了，你只需要在你想要显示网站相关数据的地方安装SUpsilon标签（这些标签必须和SUpsilon系统本源在一个页面中）。
+<strong>在你想要显示网站总访问量的地方输入以下字段：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">html</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="err">站点总访问量&lt;</span><span class="nx">span</span> <span class="nx">id</span><span class="p">=</span><span class="s2">&#34;supsilon_value_site_pv&#34;</span><span class="err">&gt;&lt;/</span><span class="nx">span</span><span class="err">&gt;次</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="err">/</span><span class="nx">html</span><span class="p">]]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>在你想要显示网站总访客人数的地方输入以下字段：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">html</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="err">站点总访客人数&lt;</span><span class="nx">span</span> <span class="nx">id</span><span class="p">=</span><span class="s2">&#34;supsilon_value_site_uv&#34;</span><span class="err">&gt;&lt;/</span><span class="nx">span</span><span class="err">&gt;人次</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="err">/</span><span class="nx">html</span><span class="p">]]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>在你想要显示网站总访客人数的地方输入以下字段：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">html</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="err">本页面总访问量&lt;</span><span class="nx">span</span> <span class="nx">id</span><span class="p">=</span><span class="s2">&#34;supsilon_value_page_pv&#34;</span><span class="err">&gt;&lt;/</span><span class="nx">span</span><span class="err">&gt;次</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="err">/</span><span class="nx">html</span><span class="p">]]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">请注意！标签必须和SUpsilon系统本源在同一个页面中</div>
+        </div>
+    </div>
+<p><strong>如果你嫌以上操作过于麻烦，可以直接使用下面的代码</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">html</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;</span><span class="nx">script</span> <span class="nx">async</span> <span class="nx">src</span><span class="p">=</span><span class="s2">&#34;http://www.brella.top/supsilon/supsilon-access-system.js&#34;</span><span class="err">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;/</span><span class="nx">script</span><span class="err">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">本站总访问量&lt;</span><span class="nx">span</span> <span class="nx">id</span><span class="p">=</span><span class="s2">&#34;supsilon_value_site_pv&#34;</span><span class="err">&gt;&lt;/</span><span class="nx">span</span><span class="err">&gt;次</span>
+</span></span><span class="line"><span class="cl"><span class="err">本站访客数&lt;</span><span class="nx">span</span> <span class="nx">id</span><span class="p">=</span><span class="s2">&#34;supsilon_value_site_uv&#34;</span><span class="err">&gt;&lt;/</span><span class="nx">span</span><span class="err">&gt;人次</span>
+</span></span><span class="line"><span class="cl"><span class="err">本文总阅读量&lt;</span><span class="nx">span</span> <span class="nx">id</span><span class="p">=</span><span class="s2">&#34;supsilon_value_page_pv&#34;</span><span class="err">&gt;&lt;/</span><span class="nx">span</span><span class="err">&gt;次</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="err">/</span><span class="nx">html</span><span class="p">]]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-01-17</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/blog.github.io/how-to-use-supsilon-access-system/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https:///blog.github.io/how-to-use-supsilon-access-system/" data-title="如何使用SUpsilon网站访客统计系统" data-via="JC_Zhou_"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https:///blog.github.io/how-to-use-supsilon-access-system/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https:///blog.github.io/how-to-use-supsilon-access-system/" data-title="如何使用SUpsilon网站访客统计系统"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https:///blog.github.io/how-to-use-supsilon-access-system/" data-title="如何使用SUpsilon网站访客统计系统"><i data-svg-src="/blog.github.io/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https:///blog.github.io/how-to-use-supsilon-access-system/" data-title="如何使用SUpsilon网站访客统计系统" data-ralateuid="nomoreTruth"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/blog.github.io/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/blog.github.io/first_post/" class="prev" rel="prev" title="第一篇博客：介绍"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>第一篇博客：介绍</a>
+            <a href="/blog.github.io/theme-documentation-basics/" class="next" rel="next" title="Hugo：如何使用Loveit主题建立博客">Hugo：如何使用Loveit主题建立博客<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/blog.github.io/" target="_blank">云栈</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/blog.github.io/lib/katex/katex.min.css"><link rel="stylesheet" href="/blog.github.io/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/blog.github.io/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/katex/katex.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/blog.github.io/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/blog.github.io/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/blog.github.io/js/theme.min.js"></script></body>
+</html>
